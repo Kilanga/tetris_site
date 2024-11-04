@@ -1,0 +1,99 @@
+/* Style de la navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .navbar-logo {
+    flex-shrink: 0;
+  }
+  
+  .navbar-logo-image {
+    height: 40px; /* Taille du logo dans la navbar */
+    width: auto;
+  }
+  
+  /* Icône de menu hamburger (cachée par défaut sur les grands écrans) */
+  .navbar-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Menu de navigation */
+  .navbar-menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end; /* Aligne le menu de navigation à droite */
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    position: relative;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar-links a:hover {
+    color: #b92b27;
+  }
+  
+  /* Style pour la bannière */
+  .banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f3f3f3;
+  }
+  
+  .banner-fullwidth-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive Design */
+  
+  /* Écrans moyens et petits */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none; /* Masquer le menu de navigation par défaut */
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      border-radius: 4px;
+      width: 200px;
+      z-index: 1000;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .navbar-toggle {
+      display: block; /* Afficher le menu hamburger */
+    }
+  
+    .navbar-menu.show {
+      display: block; /* Afficher le menu de navigation lorsqu'il est ouvert */
+    }
+  }
+  
