@@ -1,2 +1,39 @@
-<h1>Contact#index</h1>
-<p>Find me in app/views/contact/index.html.erb</p>
+<h1>Contactez-nous</h1>
+
+<%= form_with model: @contact, url: contact_path, method: :post, local: true do |f| %>
+  <div>
+    <%= f.label :nom, "Nom (obligatoire)" %>
+    <%= f.text_field :nom, placeholder: "Nom",required: true %>
+  </div>
+
+  <div>
+    <%= f.label :prenom, "Prénom" %>
+    <%= f.text_field :prenom ,placeholder: "Prénom" %>
+  </div>
+
+  <div>
+    <%= f.label :societe, "Société" %>
+    <%= f.text_field :societe, placeholder: "Nom de la société" %>
+  </div>
+
+  <div>
+    <%= f.label :email, "Adresse mail (obligatoire)" %>
+    <%= f.email_field :email, placeholder: "Adresse mail", required: true %>
+  </div>
+
+  <div>
+    <%= f.label :contact_telephone, "Je souhaite être contacté par téléphone ?" %>
+    <%= f.text_field :contact_telephone, placeholder: "Entrez votre numéro de téléphone" %>
+  </div>
+
+  <div>
+    <%= f.label :message, "Message (obligatoire)" %>
+    <%= f.text_area :message, placeholder: "Message...", required: true %>
+  </div>
+
+  <div>
+    <%= f.submit "Envoyer" %>
+  </div>
+<% end %>
+
+

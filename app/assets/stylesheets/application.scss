@@ -10,3 +10,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+#map {
+    width: 100%;
+    height: 400px; /* Ajustez la hauteur selon vos besoins */
+  }

@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   resources :galeries, only: [:index], path: 'galeries-portes-verre-echelle'
   resources :vehicules_specialises, only: [:index], path: 'vehicules-specialises-vasp'
   get 'notre-equipe', to: 'teams#index', as: :notre_equipe
+
   get 'contact', to: 'contact#index', as: :contact
+  post 'contact', to: 'contact#create'
 end

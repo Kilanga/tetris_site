@@ -1,2 +1,43 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+
+
+
+<div id="map" style="width: 100%; height: 400px;"></div>
+
+<style>
+  /* Supprime le style de lien pour le bouton dans la popup */
+  .leaflet-popup-content .btn {
+    text-decoration: none; /* Retire le soulignement du lien */
+    color: white;          /* Assure que le texte est en blanc */
+  }
+</style>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const map = L.map('map').setView([45.77759, 4.93671], 15); // Centré sur l'adresse
+
+    // Ajouter les tuiles OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Utiliser l'URL Cloudinary pour le marqueur personnalisé
+    const customIcon = L.icon({
+      iconUrl: 'https://res.cloudinary.com/dqpfnffmi/image/upload/v1730718446/logo-simple-original_mc5ybi.svg',
+      iconSize: [70, 70],
+      iconAnchor: [35, 70],
+      popupAnchor: [0, -70]
+    });
+
+    L.marker([45.77759, 4.93671], { icon: customIcon }).addTo(map)
+      .bindPopup(`
+        <b>11 rue Francine Fromont</b><br>Vaulx-en-Velin<br>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=45.781405,4.922265" target="_blank" class="btn btn-primary btn-sm mt-2">
+          Obtenir un itinéraire
+        </a>
+      `);
+  });
+</script>

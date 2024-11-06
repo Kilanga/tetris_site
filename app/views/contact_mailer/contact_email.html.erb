@@ -1,0 +1,9 @@
+<p>Vous avez reçu un nouveau message de contact :</p>
+
+<p><strong>Nom :</strong> <%= @contact.nom %></p>
+<p><strong>Prénom :</strong> <%= @contact.prenom || 'Non spécifié' %></p>
+<p><strong>Société :</strong> <%= @contact.societe || 'Non spécifié' %></p>
+<p><strong>Email :</strong> <%= @contact.email %></p>
+<p><strong>Numéro de téléphone :</strong> <%= @contact.contact_telephone.presence || 'Non spécifié' %></p>
+<p><strong>Message :</strong></p>
+<p><%= @contact.message %></p>

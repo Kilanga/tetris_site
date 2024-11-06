@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Votre Application</title>
+  <title>Tetris aménagement</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= stylesheet_link_tag 'navbar', media: 'all' %>
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <%= javascript_importmap_tags %>
 </head>
 
 <body>
   <%= render 'shared/navbar' %> 
 
   <%= yield %>
+
+  <% if flash[:notice] %>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        Swal.fire({
+          icon: 'success',
+          title: 'Message envoyé',
+          text: '<%= j flash[:notice] %>',
+          confirmButtonText: 'OK'
+        });
+      });
+    </script>
+  <% elsif flash[:alert] %>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        Swal.fire({
+          icon: 'error',
+          title: 'Erreur',
+          text: '<%= j flash[:alert] %>',
+          confirmButtonText: 'OK'
+        });
+      });
+    </script>
+  <% end %>
 </body>
+
 <script>
   function toggleMenu() {
     const menu = document.querySelector('.navbar-menu');
