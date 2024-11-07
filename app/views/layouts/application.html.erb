@@ -5,18 +5,22 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
+  <!-- CSS principal -->
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= stylesheet_link_tag 'navbar', media: 'all' %>
+  <%= stylesheet_link_tag 'contact', media: 'all' %>
   
+  <!-- SweetAlert2 via CDN -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
+  <!-- Leaflet via CDN -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 
+  <!-- Bootstrap et Google Fonts -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <%= javascript_importmap_tags %>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Hind:wght@400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -24,6 +28,7 @@
 
   <%= yield %>
 
+  <!-- SweetAlert2 pour les notifications -->
   <% if flash[:notice] %>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
@@ -47,13 +52,26 @@
       });
     </script>
   <% end %>
+    <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.navbar-menu');
+      menu.classList.toggle('show');
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const checkbox = document.getElementById("contact_telephone_checkbox");
+      const telephoneField = document.getElementById("telephone_field");
+
+      if (checkbox && telephoneField) {
+        telephoneField.style.display = checkbox.checked ? "block" : "none";
+
+        checkbox.addEventListener("change", function() {
+          telephoneField.style.display = checkbox.checked ? "block" : "none";
+        });
+      } else {
+        console.warn("Éléments 'contact_telephone_checkbox' ou 'telephone_field' introuvables dans le DOM.");
+      }
+    });
+  </script>
 </body>
-
-<script>
-  function toggleMenu() {
-    const menu = document.querySelector('.navbar-menu');
-    menu.classList.toggle('show');
-  }
-</script>
-
 </html>

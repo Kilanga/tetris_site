@@ -1,0 +1,101 @@
+@import 'variables';
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $secondary-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-family: $font-title;
+    font-weight: 700; // Montserrat Bold
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-family: $font-subtitle;
+    font-weight: 500; // Montserrat Medium
+    color: $primary-color;
+    text-transform: uppercase; // Mettre les sous-titres en majuscules
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-control {
+    font-family: $font-body;
+    font-weight: 400; // Hind Regular
+    border: 1px solid lighten($primary-color, 15%);
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: $text-color;
+    background-color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 5px rgba($primary-color, 0.3);
+      outline: none;
+    }
+  }
+
+  .form-check-input {
+    accent-color: $primary-color;
+  }
+
+  .form-check-label {
+    font-family: $font-body;
+    font-weight: 400; // Hind Regular
+    color: $text-color;
+  }
+
+  .btn-submit {
+    font-family: $font-title;
+    font-weight: 700; // Montserrat Bold
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: $accent-color;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+      cursor: pointer;
+    }
+  }
+
+  .form-text {
+    font-family: $font-body;
+    font-weight: 400; // Hind Regular
+    color: darken($text-color, 10%);
+    font-size: 0.875rem;
+  }
+}
+
+// Style de message de succès et d'erreur
+.alert {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  font-family: $font-body;
+  font-weight: 400; // Hind Regular
+
+  &-success {
+    background-color: lighten($primary-color, 20%);
+    color: $primary-color;
+  }
+
+  &-error {
+    background-color: lighten($accent-color, 30%);
+    color: darken($accent-color, 15%);
+  }
+}
