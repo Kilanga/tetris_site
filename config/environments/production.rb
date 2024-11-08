@@ -52,7 +52,7 @@ Rails.application.configure do
 
   # Configurer l'URL par défaut pour les liens générés dans les emails
   config.action_mailer.default_url_options = { host: "your-app-name.herokuapp.com", protocol: "https" }
-end
+
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
