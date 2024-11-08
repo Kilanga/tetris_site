@@ -41,17 +41,17 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.sendgrid.net",
+    address: "smtp.gmail.com",
     port: 587,
-    domain: "tetris.arnaudlothe.eu",  # Remplacez par votre domaine
-    user_name: "apikey",  # Utilisé par SendGrid, indique qu'une clé d'API est utilisée
-    password: ENV["SENDGRID_API_KEY"],  # Utilisez la variable d'environnement définie par Heroku
-    authentication: :plain,
+    domain: "example.com",  # Utilisez votre domaine ou laissez vide pour gmail.com
+    user_name: ENV["GMAIL_USERNAME"],  # Définissez vos variables d'environnement pour plus de sécurité
+    password: ENV["GMAIL_PASSWORD"],
+    authentication: "plain",
     enable_starttls_auto: true
   }
 
   # Configurer l'URL par défaut pour les liens générés dans les emails
-  config.action_mailer.default_url_options = { host: "your-app-name.herokuapp.com", protocol: "https" }
+  config.action_mailer.default_url_options = { host: "tetris-amenagement.herokuapp.com", protocol: "https" }
 
 
   # Mount Action Cable outside main process or domain.
