@@ -25,9 +25,9 @@
 
 <body>
   <%= render 'shared/navbar' %> 
-
+  <div class="yield-body">
   <%= yield %>
-
+  </div>
   <!-- SweetAlert2 pour les notifications -->
   <% if flash[:notice] %>
     <script>
