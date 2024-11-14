@@ -1,0 +1,34 @@
+.equipement-exterieur {
+    .row {
+      margin-bottom: 2rem;
+  
+      h2 {
+        color: #333;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+  
+      p, ul li {
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+  
+      img {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+  
+      ul {
+        padding-left: 20px;
+      }
+    }
+  
+    // Alternance de direction pour les sections sur écrans moyens et plus
+    @media (min-width: 768px) {
+      .row:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  

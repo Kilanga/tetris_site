@@ -1,0 +1,21 @@
+.home-page {
+  
+    /* Style de la carte */
+    .map {
+      width: 90%; /* Largeur de la carte ajustée pour centrage */
+      height: 90%; /* Hauteur de la carte ajustée pour centrage */
+    }
+    
+    /* Ajustements pour centrer le contenu des colonnes */
+    .col-md-6 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    /* Style de la section d'informations */
+    .info {
+      text-align: center; /* Centrage du texte */
+    }
+  }
+  

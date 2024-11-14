@@ -1,43 +1,53 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="banner">
+  <%= image_tag "https://res.cloudinary.com/dqpfnffmi/image/upload/v1730716607/logo-complet-original_ohx2ci.svg", alt: "Bannière Logo", class: "banner-fullwidth-image" %>
+</div>
 
+<div class="home-page d-flex justify-content-center align-items-center vh-100">
+    <div class="container">
+      <div class="row shadow-lg">
+        <!-- Colonne de la carte, centrée dans sa colonne -->
+        <div class="col-md-6 d-flex justify-content-center align-items-center p-0">
+          <div id="map" class="map w-100 h-100"></div>
+        </div>
 
+        <!-- Colonne des informations, centrée dans sa colonne -->
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center p-4">
+          <h2>Agencement Véhicules Dussurgey</h2>
+          <p><strong>Adresse :</strong> 2 chemin du génie, 69200 Vénissieux</p>
+          <p>(Le long du boulevard périphérique Laurent Bonnevay, au dos des concessions automobiles)</p>
+          <p><strong>Téléphone fixe :</strong> 09 63 60 29 74</p>
+          <p><strong>Téléphone portable :</strong> 06 07 37 98 98</p>
+          <p><strong>Fax :</strong> 04 78 04 46 61</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div id="map" style="width: 100%; height: 400px;"></div>
+  <!-- Script de la carte Leaflet -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const map = L.map('map').setView([45.77759, 4.93671], 15); // Centré sur l'adresse
 
-<style>
-  /* Supprime le style de lien pour le bouton dans la popup */
-  .leaflet-popup-content .btn {
-    text-decoration: none; /* Retire le soulignement du lien */
-    color: white;          /* Assure que le texte est en blanc */
-  }
-</style>
+      // Ajouter les tuiles OpenStreetMap
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
 
+      // Utiliser l'URL Cloudinary pour le marqueur personnalisé
+      const customIcon = L.icon({
+        iconUrl: 'https://res.cloudinary.com/dqpfnffmi/image/upload/v1730718446/logo-simple-original_mc5ybi.svg',
+        iconSize: [70, 70],
+        iconAnchor: [35, 70],
+        popupAnchor: [0, -70]
+      });
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const map = L.map('map').setView([45.77759, 4.93671], 15); // Centré sur l'adresse
-
-    // Ajouter les tuiles OpenStreetMap
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Utiliser l'URL Cloudinary pour le marqueur personnalisé
-    const customIcon = L.icon({
-      iconUrl: 'https://res.cloudinary.com/dqpfnffmi/image/upload/v1730718446/logo-simple-original_mc5ybi.svg',
-      iconSize: [70, 70],
-      iconAnchor: [35, 70],
-      popupAnchor: [0, -70]
+      L.marker([45.77759, 4.93671], { icon: customIcon }).addTo(map)
+        .bindPopup(`
+          <b>11 rue Francine Fromont</b><br>Vaulx-en-Velin<br>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=45.781405,4.922265" target="_blank" class="btn btn-primary btn-sm mt-2">
+            Obtenir un itinéraire
+          </a>
+        `);
     });
-
-    L.marker([45.77759, 4.93671], { icon: customIcon }).addTo(map)
-      .bindPopup(`
-        <b>11 rue Francine Fromont</b><br>Vaulx-en-Velin<br>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=45.781405,4.922265" target="_blank" class="btn btn-primary btn-sm mt-2">
-          Obtenir un itinéraire
-        </a>
-      `);
-  });
-</script>
+  </script>

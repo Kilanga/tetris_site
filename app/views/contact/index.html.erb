@@ -1,4 +1,6 @@
-<!-- app/views/contact/index.html.erb -->
+<div class="banner">
+  <%= image_tag "https://res.cloudinary.com/dqpfnffmi/image/upload/v1730716607/logo-complet-original_ohx2ci.svg", alt: "Bannière Logo", class: "banner-fullwidth-image" %>
+</div>
 <div class="contact-form">
   <h2>Contactez-nous</h2>
   <%= form_with model: @contact, url: contact_path, local: true do |f| %>
