@@ -1,21 +1,50 @@
+@import 'variables';
 .home-page {
+    .card {
+      border-radius: 8px;
+      
+    }
   
-    /* Style de la carte */
+    /* Styles de la carte */
     .map {
-      width: 90%; /* Largeur de la carte ajustée pour centrage */
-      height: 90%; /* Hauteur de la carte ajustée pour centrage */
-    }
-    
-    /* Ajustements pour centrer le contenu des colonnes */
-    .col-md-6 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 100%; /* La carte occupe toute la hauteur de la carte */
     }
   
-    /* Style de la section d'informations */
-    .info {
-      text-align: center; /* Centrage du texte */
+    #partenaires img {
+      border-radius: 50%;
+    }
+    hr.hr-text {
+        position: relative;
+          border: none;
+          height: 3px;
+          background: $accent-color       
+      }
+      
+      hr.hr-text::before {
+          content: attr(data-content);
+          display: inline-block;
+          background: white;
+          font-weight: bolder;
+          font-size: 1.6rem;
+          color:$primary-color;
+          border-radius: 30rem;
+          padding: 0.3rem 2.5rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: $font-subtitle;
+      }
+      @media (max-width: 768px) {
+        hr.hr-text::before {
+            font-size: 1.2rem; /* Réduit la taille de la police pour les petits écrans */
+            padding: 0.2rem 1.5rem;
+        }
+    
+        #partenaires img {
+            width: 80%; /* Réduit la taille des logos partenaires sur mobile */
+            margin: 0 auto;
+        }
     }
   }
   

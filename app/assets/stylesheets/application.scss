@@ -16,9 +16,18 @@
 @import 'custom_amenagement_metal';
 @import 'custom_equipement_exterieur';
 @import 'home';
+@import 'footer';
 
 
 
 .yield-body {
-    background-color: $secondary-color;
+    h1{
+        font-family: $font-title;
+    }
+    h2,h3 {
+        font-family: $font-subtitle;
+    }
+    p{
+        font-family: $font-body;
+    }
 }
