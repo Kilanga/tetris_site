@@ -5,20 +5,44 @@
     <% end %>
   </div>
 
- <div class="navbar-toggle" onclick="toggleMenu()">
+  <div class="navbar-toggle" onclick="toggleMenu()">
     &#9776;
   </div>
 
   <!-- Menu de navigation -->
   <nav class="navbar-menu">
     <ul class="navbar-links">
-      <li><%= link_to "Amenagement Bois", amenagement_bois_path %></li>
-      <li><%= link_to "Aménagement métallique EDSTROM", amenagement_metal_index_path %></li>
-      <li><%= link_to "Équipements extérieurs", galeries_path %></li>
-      <li><%= link_to "Véhicules spécialisés (VASP)", vehicules_specialises_path %></li>
-      <!-- <li><%= link_to "Notre équipe", notre_equipe_path %></li> -->
-      <li><%= link_to "Contact", contact_path %></li>
+      <!-- Menu déroulant "Nos prestations" -->
+      <li class="dropdown">
+        <a href="#">Nos prestations</a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Habillage de protection", galeries_path %></li>
+          <li><%= link_to "Casiers et Rangements Bois", amenagement_bois_path %></li>
+          <li><%= link_to "Casiers et Rangements Métalliques", amenagement_metal_index_path %></li>
+          <li><%= link_to "Équipements extérieurs", amenagement_metal_index_path %></li>
+          <li><%= link_to "Véhicules spécialisés (VASP)", vehicules_specialises_path %></li>
+        </ul>
+      </li>
+
+      <!-- Liens de "Nos prestations" visibles sur grands écrans -->
+      <li class="large-screen-only"><%= link_to "Habillage de protection", galeries_path %></li>
+      <li class="large-screen-only"><%= link_to "Casiers et Rangements Bois", amenagement_bois_path %></li>
+      <li class="large-screen-only"><%= link_to "Casiers et Rangements Métalliques", amenagement_metal_index_path %></li>
+      <li class="large-screen-only"><%= link_to "Équipements extérieurs", amenagement_metal_index_path %></li>
+      <li class="large-screen-only"><%= link_to "Véhicules spécialisés (VASP)", vehicules_specialises_path %></li>
+
+      <!-- Menu déroulant "À propos" -->
+      <li class="dropdown">
+        <a href="#">À propos</a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Notre équipe", notre_equipe_path %></li>
+          <li><%= link_to "Contact", contact_path %></li>
+        </ul>
+      </li>
+
+      <!-- Liens de "À propos" visibles sur grands écrans -->
+      <li class="large-screen-only"><%= link_to "Notre équipe", notre_equipe_path %></li>
+      <li class="large-screen-only"><%= link_to "Contact", contact_path %></li>
     </ul>
   </nav>
 </div>
-
