@@ -27,6 +27,10 @@
   .content {
     flex: 1;
     padding-bottom: 80px; // adapte selon la hauteur réelle de ton footer
+
+    @media (max-width: 768px) {
+        padding-bottom: 20px;
+    }
   }
   
   
