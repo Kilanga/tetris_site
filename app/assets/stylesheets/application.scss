@@ -18,8 +18,18 @@
 @import 'home';
 @import 'footer';
 
-
-
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    flex: 1;
+    padding-bottom: 80px; // adapte selon la hauteur réelle de ton footer
+  }
+  
+  
 .yield-body {
     h1{
         font-family: $font-title;

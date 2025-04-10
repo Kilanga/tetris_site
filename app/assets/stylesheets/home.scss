@@ -1,4 +1,27 @@
 @import 'variables';
+
+.banner-fullwidth-image {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  display: block;
+}
+
+.certification-logo {
+  max-height: 180px;
+  object-fit: contain;
+}
+
+#qualifications .card {
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
 .home-page {
     .card {
       border-radius: 8px;

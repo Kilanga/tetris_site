@@ -1,35 +1,34 @@
 <div class="banner">
-  <%= image_tag "https://res.cloudinary.com/dqpfnffmi/image/upload/v1730716607/logo-complet-original_ohx2ci.svg", alt: "Bannière Logo", class: "bg-white banner-fullwidth-image" %>
+  <%= image_tag "https://res.cloudinary.com/dqpfnffmi/image/upload/v1744272731/logo-repris-homepage-prop1_topz91.svg", alt: "Bannière Logo", class: "bg-white banner-fullwidth-image" %>
 </div>
 
 <div class="home-page">
     <!-- Section 1: Nos qualifications -->
     <section class="py-5" id="qualifications">
-      <div class="container text-center">
-        <hr data-content="Nos qualifications" class="hr-text mb-5 h2">
-        <p class="lead">Nous sommes fiers de notre expertise.</p>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card shadow-sm p-3">
-              <h5 class="card-title">Certification ISO 9001</h5>
-              <p class="card-text">La garantie d’un service de qualité irréprochable.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm p-3">
-              <h5 class="card-title">20+ ans d'expérience</h5>
-              <p class="card-text">Une expertise construite sur des années de travail et de passion.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm p-3">
-              <h5 class="card-title">Partenariats stratégiques</h5>
-              <p class="card-text">Travailler avec les leaders de l'industrie pour un service optimal.</p>
-            </div>
-          </div>
+  <div class="container text-center">
+    <hr data-content="Nos qualifications" class="hr-text mb-5 h2">
+    <p class="lead">Nous sommes fiers de notre expertise.</p>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm p-4 h-100 d-flex flex-column align-items-center">
+          <h5 class="card-title mb-3">Opérateur Qualifié</h5>
+          <%= image_tag "https://res.cloudinary.com/dqpfnffmi/image/upload/v1744274132/UTAC_Certification_-_Op%C3%A9rateur_qualifi%C3%A9_wtksww.png",
+              alt: "Certification UTAC Opérateur",
+              class: "img-fluid certification-logo" %>
         </div>
       </div>
-    </section>
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm p-4 h-100 d-flex flex-column align-items-center">
+          <h5 class="card-title mb-3">Aménageur Qualifié</h5>
+          <%= image_tag "https://res.cloudinary.com/dqpfnffmi/image/upload/v1744274116/UTAC_Certification_-_Am%C3%A9nageur_qualifi%C3%A9_lykm0b.jpg",
+              alt: "Certification UTAC Aménageur",
+              class: "img-fluid certification-logo" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- Section 2: Nos partenaires -->
     <section class="py-5" id="partenaires">
       <div class="container text-center">
