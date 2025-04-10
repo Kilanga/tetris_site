@@ -11,6 +11,19 @@
   max-height: 180px;
   object-fit: contain;
 }
+.partner-logo {
+  max-height: 100px;
+  object-fit: contain;
+  width: 100%;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+
 
 #qualifications .card {
   border-radius: 12px;
@@ -31,10 +44,6 @@
     /* Styles de la carte */
     .map {
       height: 100%; /* La carte occupe toute la hauteur de la carte */
-    }
-  
-    #partenaires img {
-      border-radius: 50%;
     }
     hr.hr-text {
         position: relative;

@@ -31,29 +31,44 @@
 
     <!-- Section 2: Nos partenaires -->
     <section class="py-5" id="partenaires">
-      <div class="container text-center">
-        <hr data-content="Nos partenaires" class="hr-text mb-5 h2">
-        <p class="lead">Nous collaborons avec des partenaires de confiance pour garantir la qualité et l'efficacité de nos services.</p>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="https://via.placeholder.com/150" alt="Logo partenaire 1" class="img-fluid mb-3">
-            <p>Partenaire 1</p>
-          </div>
-          <div class="col-md-3">
-            <img src="https://via.placeholder.com/150" alt="Logo partenaire 2" class="img-fluid mb-3">
-            <p>Partenaire 2</p>
-          </div>
-          <div class="col-md-3">
-            <img src="https://via.placeholder.com/150" alt="Logo partenaire 3" class="img-fluid mb-3">
-            <p>Partenaire 3</p>
-          </div>
-          <div class="col-md-3">
-            <img src="https://via.placeholder.com/150" alt="Logo partenaire 4" class="img-fluid mb-3">
-            <p>Partenaire 4</p>
-          </div>
-        </div>
+  <div class="container text-center">
+    <hr data-content="Nos partenaires" class="hr-text mb-5 h2">
+    <p class="lead">Nous collaborons avec des partenaires de confiance pour garantir la qualité et l'efficacité de nos services.</p>
+
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-4 mb-3">
+        <a href="https://standbygroup.com/fr/" target="_blank" rel="noopener noreferrer" title="Visiter le site de Mercura">
+          <img src="https://res.cloudinary.com/dqpfnffmi/image/upload/v1744315591/logo_MERCURA_ed7a3g.png" alt="Mercura" class="img-fluid partner-logo mb-2">
+        </a>
       </div>
-    </section>
+      <div class="col-md-4 mb-3">
+        <a href="https://www.it-concept.eu/" target="_blank" rel="noopener noreferrer" title="Visiter le site de IT Concept">
+          <img src="https://res.cloudinary.com/dqpfnffmi/image/upload/v1744315591/logo_IT_CONCEPT_c9xoor.png" alt="IT Concept" class="img-fluid partner-logo mb-2">
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="https://forankra.fr/fr/" target="_blank" rel="noopener noreferrer" title="Visiter le site de Forankra">
+          <img src="https://res.cloudinary.com/dqpfnffmi/image/upload/v1744315591/logo_FORANKRA_hpbvh3.png" alt="Forankra" class="img-fluid partner-logo mb-2">
+        </a>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-3">
+        <a href="https://www.mtsproshop.com/fr/" target="_blank" rel="noopener noreferrer" title="Visiter le site de MTS">
+          <img src="https://res.cloudinary.com/dqpfnffmi/image/upload/v1744315591/logo_MTS_orpnsp.png" alt="MTS" class="img-fluid partner-logo mb-2">
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="https://www.systemedstrom.com/fr/" target="_blank" rel="noopener noreferrer" title="Visiter le site de Edström">
+          <img src="https://res.cloudinary.com/dqpfnffmi/image/upload/v1744315591/logo_EDSTR%C3%96M_xwi8cu.png" alt="Ëdstrom" class="img-fluid partner-logo mb-2">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     <!-- Section 3: Nous trouver -->
     <section class="py-5" id="nous-trouver">
       <div class="container text-center">
@@ -69,11 +84,12 @@
           <!-- Colonne des informations -->
           <div class="col-md-6 d-flex justify-content-center">
             <div class="p-4" style="width: 100%; max-width: 500px;">
-              <h2 class="h2 text-center" style="color:#0bb0a9;">Tetris Aménagement de Véhicules</h2>
-              <p class="mt-3">11/12 rue Francine Fromont – 69120 Vaulx en Velin</p>
-              <p><strong  style="color:#0bb0a9;">Téléphone :</strong> 06.16.38.91.18</p>
-              <p><strong  style="color:#0bb0a9;">Mail :</strong> mickael@tetris-vv.fr</p>
-            </div>
+  <h2 class="h2 text-center" style="color:#0bb0a9;">Tetris Aménagement de Véhicules</h2>
+  <p class="mt-3 mb-1">11/12 rue Francine Fromont – 69120 Vaulx en Velin</p>
+  <p class="mb-3">4 avenue des Pays-Bas – 69330 Meyzieu</p>
+  <p><strong style="color:#0bb0a9;">Téléphone :</strong> 06.16.38.91.18</p>
+  <p><strong style="color:#0bb0a9;">Mail :</strong> mickael@tetris-vv.fr</p>
+</div>
           </div>
         </div>
       </div>
@@ -82,28 +98,39 @@
   <!-- Script de la carte Leaflet -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const map = L.map('map').setView([45.77759, 4.93671], 15); // Centré sur l'adresse
+  // Centrage entre Vaulx-en-Velin et Meyzieu
+  const map = L.map('map').setView([45.768, 4.982], 12);
 
-      // Ajouter les tuiles OpenStreetMap
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 
-      // Utiliser l'URL Cloudinary pour le marqueur personnalisé
-      const customIcon = L.icon({
-        iconUrl: 'https://res.cloudinary.com/dqpfnffmi/image/upload/v1730718446/logo-simple-original_mc5ybi.svg',
-        iconSize: [70, 70],
-        iconAnchor: [35, 70],
-        popupAnchor: [0, -70]
-      });
+  const customIcon = L.icon({
+    iconUrl: 'https://res.cloudinary.com/dqpfnffmi/image/upload/v1730718446/logo-simple-original_mc5ybi.svg',
+    iconSize: [70, 70],
+    iconAnchor: [35, 70],
+    popupAnchor: [0, -70]
+  });
 
-      L.marker([45.77759, 4.93671], { icon: customIcon }).addTo(map)
-        .bindPopup(`
-          <b>11 rue Francine Fromont</b><br>Vaulx-en-Velin<br>
-          <a href="https://www.google.com/maps/dir/?api=1&destination=45.781405,4.922265" target="_blank" class="btn btn-primary btn-sm mt-2" style="color: #ffffff;">
-            Obtenir un itinéraire
-          </a>
-        `);
-    });
+  // Marqueur 1 : Vaulx-en-Velin
+  L.marker([45.77759, 4.93671], { icon: customIcon }).addTo(map)
+    .bindPopup(`
+      <b>11 rue Francine Fromont</b><br>Vaulx-en-Velin<br>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=45.77759,4.93671" target="_blank" class="btn btn-primary btn-sm mt-2" style="color: #ffffff;">
+        Obtenir un itinéraire
+      </a>
+    `);
+
+  // Marqueur 2 : Meyzieu (coordonnées précises)
+  L.marker([45.75888691780684, 5.027744957672884], { icon: customIcon }).addTo(map)
+    .bindPopup(`
+      <b>4 avenue des Pays-Bas</b><br>69330 Meyzieu<br>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=45.75888691780684,5.027744957672884" target="_blank" class="btn btn-primary btn-sm mt-2" style="color: #ffffff;">
+        Obtenir un itinéraire
+      </a>
+    `);
+});
+
+
   </script>
