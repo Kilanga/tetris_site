@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   # Routes pour les sections principales
   resources :amenagement_bois, only: [:index]
+  resources :equipements_ext, only: [:index]
   resources :amenagement_metal, only: [:index], path: 'amenagement-metallique-edstrom'
   resources :galeries, only: [:index], path: 'galeries-portes-verre-echelle'
   resources :vehicules_specialises, only: [:index], path: 'vehicules-specialises-vasp'

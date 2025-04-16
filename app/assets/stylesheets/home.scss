@@ -1,16 +1,53 @@
 @import 'variables';
 
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  padding-bottom: 80px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 20px;
+  }
+}
+
+// Polices globales
+.yield-body {
+  h1 {
+    font-family: $font-title;
+  }
+  h2, h3 {
+    font-family: $font-subtitle;
+  }
+  p {
+    font-family: $font-body;
+  }
+}
+
+// Bannière
 .banner-fullwidth-image {
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
   display: block;
+  height: auto;
+
+  @media (max-width: 576px) {
+    padding: 0 1rem;
+  }
 }
 
+// Logos certifications
 .certification-logo {
   max-height: 180px;
   object-fit: contain;
 }
+
+// Logos partenaires
 .partner-logo {
   max-height: 100px;
   object-fit: contain;
@@ -21,10 +58,13 @@
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: 576px) {
+    max-width: 90%;
+  }
 }
 
-
-
+// Cartes qualifications
 #qualifications .card {
   border-radius: 12px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -35,48 +75,81 @@
   }
 }
 
+// Partenaires : centrage logos sur mobile
+#partenaires .row > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// HR personnalisée avec texte
+hr.hr-text {
+  position: relative;
+  border: none;
+  height: 3px;
+  background: $accent-color;
+}
+
+hr.hr-text::before {
+  content: attr(data-content);
+  display: inline-block;
+  background: white;
+  font-weight: bolder;
+  font-size: 1.6rem;
+  color: $primary-color;
+  border-radius: 30rem;
+  padding: 0.3rem 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $font-subtitle;
+}
+
+@media (max-width: 768px) {
+  hr.hr-text::before {
+    font-size: 1.2rem;
+    padding: 0.2rem 1.5rem;
+  }
+}
+
+// Sections de la home page
 .home-page {
-    .card {
-      border-radius: 8px;
-      
-    }
-  
-    /* Styles de la carte */
-    .map {
-      height: 100%; /* La carte occupe toute la hauteur de la carte */
-    }
-    hr.hr-text {
-        position: relative;
-          border: none;
-          height: 3px;
-          background: $accent-color       
-      }
-      
-      hr.hr-text::before {
-          content: attr(data-content);
-          display: inline-block;
-          background: white;
-          font-weight: bolder;
-          font-size: 1.6rem;
-          color:$primary-color;
-          border-radius: 30rem;
-          padding: 0.3rem 2.5rem;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          font-family: $font-subtitle;
-      }
-      @media (max-width: 768px) {
-        hr.hr-text::before {
-            font-size: 1.2rem; /* Réduit la taille de la police pour les petits écrans */
-            padding: 0.2rem 1.5rem;
-        }
-    
-        #partenaires img {
-            width: 80%; /* Réduit la taille des logos partenaires sur mobile */
-            margin: 0 auto;
-        }
+  section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    @media (max-width: 768px) {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
     }
   }
-  
+
+  .card {
+    border-radius: 8px;
+  }
+
+  // Carte Leaflet responsive
+  .map {
+    width: 100%;
+    height: 350px;
+
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+
+    @media (max-width: 576px) {
+      height: 250px;
+    }
+  }
+
+  // Texte de contact
+  #nous-trouver p {
+    font-size: 1.1rem;
+
+    @media (max-width: 576px) {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
