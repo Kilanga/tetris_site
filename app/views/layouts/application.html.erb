@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tetris aménagement</title>
+<title><%= content_for?(:title) ? yield(:title) : "Tetris Aménagement de Véhicules - Spécialiste à Lyon" %></title>
+<meta name="description" content="<%= content_for?(:meta_description) ? yield(:meta_description) : 'Aménagement de véhicules professionnels dans l’Est-Lyonnais et à Lyon, certifié UTAC.' %>">
+
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 

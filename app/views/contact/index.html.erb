@@ -1,6 +1,14 @@
+<% content_for :title, "Contactez Tetris Aménagement - Est-Lyonnais & Lyon" %>
+<% content_for :meta_description, "Besoin d’un aménagement sur mesure pour votre véhicule utilitaire ? Contactez Tetris Aménagement à Vaulx-en-Velin, dans l’Est-Lyonnais près de Lyon. Nous répondons rapidement à toutes vos demandes." %>
+<h1 class="visually-hidden">Tetris Aménagement de Véhicules à Lyon</h1>
+
 <div class="banner">
   <%= image_tag "https://res.cloudinary.com/dqpfnffmi/image/upload/v1744272731/logo-repris-homepage-prop1_topz91.svg", alt: "Bannière Logo", class: "bg-white banner-fullwidth-image" %>
 </div>
+<p class="mt-4">
+  Avant de nous écrire, vous pouvez consulter nos <%= link_to "aménagements en bois", amenagement_bois_index_path %>, <%= link_to "solutions métalliques", amenagement_metal_index_path %> ou <%= link_to "galeries et équipements extérieurs", equipements_ext_index_path %>.
+</p>
+
 <div class="contact-form">
   <h2>Contactez-nous</h2>
   <%= form_with model: @contact, url: contact_path, local: true do |f| %>

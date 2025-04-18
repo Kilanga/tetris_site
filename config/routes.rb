@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :vehicules_specialises, only: [:index], path: 'vehicules-specialises-vasp'
   get 'notre-equipe', to: 'teams#index', as: :notre_equipe
   get 'mentions_legales', to: 'layouts#mention', as: :mention_legales
+  get 'plan-du-site', to: 'layouts#sitemap', as: :sitemap
 
   get 'contact', to: 'contact#index', as: :contact
   post 'contact', to: 'contact#create'
