@@ -69,9 +69,32 @@
       <%= image_tag "https://res.cloudinary.com/dqpfnffmi/image/upload/v1744795916/%C3%A9quipements_ext%C3%A9rieurs-6_hz06r4.jpg", class: "img-fluid img-same-height rounded", alt: "Marchepied latéral en acier pour fourgon utilitaire professionnel" %>
     </div>
   </div>
-  <p class="mt-4">
-  Pour un aménagement intérieur complet, consultez nos <%= link_to "rangements en métal", amenagement_metal_index_path %> ou <%= link_to "solutions bois sur mesure", amenagement_bois_index_path %>.  
-  Besoin de contact ? <%= link_to "Parlez-nous de votre projet", contact_path %>.
-</p>
+  <!-- Renouvellement de l’air intérieur -->
+<div class="row align-items-center my-4">
+  <div class="col-md-8">
+    <h2>Renouvellement de l’air intérieur des véhicules utilitaires</h2>
+    <p>La pose d’un aérateur passif ou électrique, couplé avec au moins une grille d’aération, permet un renouvellement efficace de l’air dans la malle arrière du véhicule utilitaire. Cette ventilation améliore la qualité de l’air en limitant l’humidité, les odeurs et la chaleur excessive. Elle est particulièrement utile pour les professionnels transportant des matériaux sensibles ou opérant dans des conditions chaudes.</p>
+  </div>
+  <div class="col-md-4 d-flex justify-content-center">
+    <%= image_tag "https://res.cloudinary.com/dqpfnffmi/image/upload/v1745427716/%C3%A9quipements_ext%C3%A9rieurs-7_zriyej.jpg", class: "img-fluid img-same-height rounded", alt: "Aérateur de toit pour utilitaire avec grille d’aération intégrée" %>
+  </div>
+</div>
+<div class="cta-box mt-5 shadow-sm p-4 rounded-3">
+  <h5 class="mb-3">
+    <i class="bi bi-tools me-2 text-accent"></i>
+    Finalisez votre aménagement
+  </h5>
+  <p class="mb-2">
+    Pour un aménagement intérieur complet, explorez nos
+    <%= link_to "solutions métalliques sur mesure", amenagement_metal_index_path, class: "fw-semibold cta-link" %>
+    ou
+    <%= link_to "rangements bois personnalisés", amenagement_bois_path, class: "fw-semibold cta-link" %>.
+  </p>
+  <p class="mb-0">
+    <i class="bi bi-chat-left-text me-1 text-accent"></i>
+    <%= link_to "Parlez-nous de votre projet", contact_path, class: "fw-semibold cta-link" %> :
+    notre équipe vous accompagne avec plaisir.
+  </p>
+</div>
 
 </div>

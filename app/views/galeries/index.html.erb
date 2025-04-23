@@ -65,8 +65,13 @@
       <%= image_tag "https://res.cloudinary.com/dqpfnffmi/image/upload/v1744795912/habillage_de_protection-6_kvlnvf.jpg", class: "img-fluid img-same-height rounded", alt: "Vue complète d’un véhicule avec habillages installés" %>
     </div>
   </div>
-  <p class="mt-4">
-  Complétez votre installation avec des <%= link_to "équipements extérieurs", equipements_ext_index_path %> ou des <%= link_to "rangements intérieurs adaptés", amenagement_bois_index_path %>.
-</p>
+<div class="cta-box mt-5 shadow-sm p-4 rounded-3">
+  <p class="mb-0">
+    <i class="bi bi-plus-circle me-2 text-accent"></i>
+    Complétez votre installation avec des 
+    <%= link_to "équipements extérieurs", equipements_ext_index_path, class: "cta-link fw-semibold" %> ou des 
+    <%= link_to "rangements intérieurs adaptés", amenagement_bois_path, class: "cta-link fw-semibold" %>.
+  </p>
+</div>
 
 </div>

@@ -47,3 +47,29 @@
     }
 }
 
+.cta-box {
+    background-color: #f9f9f9;
+    border-left: 6px solid $primary-color;
+    font-family: $font-body;
+    color: $text-color;
+  
+    h5 {
+      font-family: $font-title;
+      color: $primary-color;
+    }
+  
+    .cta-link {
+      color: $primary-color;
+      text-decoration: none;
+  
+      &:hover {
+        color: $accent-color;
+        text-decoration: underline;
+      }
+    }
+  
+    i.text-accent {
+      color: $accent-color;
+    }
+  }
+  

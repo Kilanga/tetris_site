@@ -68,9 +68,18 @@
       <%= image_tag "https://res.cloudinary.com/dqpfnffmi/image/upload/v1744795914/casiers_m%C3%A9tal-5_wp4gwx.jpg", class: "img-fluid img-same-height rounded", alt: "Vue d’ensemble des rangements métalliques" %>
     </div>
   </div>
-  <p class="mt-4">
-  Vous préférez une approche boisée ? Consultez nos <%= link_to "rangements en bois pour utilitaires", amenagement_bois_index_path %>.  
-  Et pour plus de modularité, explorez nos <%= link_to "galeries et accessoires de toit", galeries_index_path %>.
-</p>
+<div class="cta-box mt-5 shadow-sm p-4 rounded-3">
+  <p class="mb-2">
+    <i class="bi bi-box-seam me-2 text-accent"></i>
+    Pour des solutions en métal renforcé, explorez nos 
+    <%= link_to "rangements métalliques sur mesure", amenagement_metal_index_path, class: "cta-link fw-semibold" %>.
+  </p>
+  <p class="mb-0">
+    <i class="bi bi-truck-front me-2 text-accent"></i>
+    Besoin d’optimiser l’extérieur de votre véhicule ? Découvrez nos 
+    <%= link_to "équipements extérieurs", equipements_ext_index_path, class: "cta-link fw-semibold" %>.
+  </p>
+</div>
+
 
 </div>
