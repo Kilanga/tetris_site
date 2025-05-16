@@ -5,7 +5,7 @@ SitemapGenerator::Sitemap.create do
   add '/amenagement_bois', changefreq: 'monthly'
   add '/amenagement-metallique-edstrom', changefreq: 'monthly'
   add '/equipements_ext', changefreq: 'monthly'
-  add '/galeries-portes-verre-echelle', changefreq: 'monthly'
+  add 'habillage-de-protection', changefreq: 'monthly'
   add '/vehicules-specialises-vasp', changefreq: 'monthly'
   add '/notre-equipe', changefreq: 'yearly'
   add '/contact', changefreq: 'yearly'

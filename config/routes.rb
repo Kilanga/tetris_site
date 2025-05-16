@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :amenagement_bois, only: [:index]
   resources :equipements_ext, only: [:index]
   resources :amenagement_metal, only: [:index], path: 'amenagement-metallique-edstrom'
-  resources :galeries, only: [:index], path: 'galeries-portes-verre-echelle'
+  resources :galeries, only: [:index], path: 'habillage-de-protection'
   resources :vehicules_specialises, only: [:index], path: 'vehicules-specialises-vasp'
   get 'notre-equipe', to: 'teams#index', as: :notre_equipe
   get 'mentions_legales', to: 'layouts#mention', as: :mention_legales
