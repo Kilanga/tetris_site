@@ -1,6 +1,6 @@
 # app/mailers/contact_mailer.rb
 class ContactMailer < ApplicationMailer
-  default to: "arnaud.lothe@gmail.com" # Destinataire de l'email
+  default to: "mickael@tetris-vv.fr" # Destinataire de l'email
 
   def contact_email(contact)
     @contact = contact

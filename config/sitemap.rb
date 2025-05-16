@@ -1,4 +1,4 @@
-SitemapGenerator::Sitemap.default_host = "https://www.tetris.arnaudlothe.eu"
+SitemapGenerator::Sitemap.default_host = "https://www.tetris-vv.com"
 
 SitemapGenerator::Sitemap.create do
   add '/', changefreq: 'weekly', priority: 1.0
